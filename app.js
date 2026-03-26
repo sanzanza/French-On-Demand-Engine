@@ -786,9 +786,22 @@ function regenerateFromHook(index) {
 
   const newCaption = `${selectedHook}
 
-You get everything. Until it's your turn. And suddenly, nothing comes out.
+You understood everything.
 
-Use this phrase:
+Until it was your turn to speak.
+
+And suddenly…
+nothing comes out.
+
+Not because you don’t know French.
+
+But because you didn’t have the words ready fast enough.
+
+So they switch to English.
+
+And just like that… the moment is gone.
+
+Here’s what you say instead:
 ${phrase}`;
 
   elements.reelBlock.innerHTML = `
