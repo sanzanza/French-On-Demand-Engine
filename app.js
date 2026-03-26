@@ -59,6 +59,21 @@ Hooks must:
 
 The goal:
 “This is me… how do they know this?”
+CLARITY ENFORCEMENT (CRITICAL):
+
+Do NOT use vague openings like:
+- “They pause…”
+- “It happens when…”
+
+Hooks must clearly show:
+- what just happened
+- why attention is now on the viewer
+
+If a hook starts with a vague action, rewrite it into a clear moment.
+
+Example:
+Bad: “They pause… and everything disappears.”
+Good: “They stop talking and look at you… and everything disappears.”
 BEST HOOK SELECTION RULE (CRITICAL):
 
 The best hook MUST be the one that creates the strongest emotional tension,
