@@ -4,7 +4,7 @@ const STORAGE_KEYS = {
   history: "fod_history",
   latest: "fod_latest_output",
 };
-
+let selectedHook = "";
 const SYSTEM_PROMPT = `You are a content strategist for a brand called French On Demand.
 
 The brand teaches real-life French conversation skills for expats and professionals living in France.
@@ -623,7 +623,12 @@ function renderOutput(output) {
     <div class="output-item">
       <span class="output-label">Hooks</span>
       <ol class="hook-list">
-        ${output.hooks.map((hook) => `<li>${escapeHtml(hook)}</li>`).join("")}
+        ${output.hooks.map((hook, i) => `
+  <li>
+    ${escapeHtml(hook)}
+    <button onclick="selectHook(${i})">Use</button>
+  </li>
+`).join("")}
       </ol>
     </div>
     <div class="output-item"><span class="output-label">Best Hook</span>${escapeHtml(output.bestHook)}</div>
@@ -751,4 +756,9 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+function selectHook(index) {
+  const output = JSON.parse(localStorage.getItem("fod_latest_output"));
+  selectedHook = output.hooks[index];
+  console.log(selectedHook);
 }
