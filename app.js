@@ -26,53 +26,135 @@ She freezes because she does not have ready-to-use phrases AND she is afraid of 
 
 ---
 
-HOOK RULES:
-- Must feel personal even without always starting with "you"
-- Must still feel like they are speaking directly to Yasmin
-- Must trigger “this is me”
-- Must be emotional and slightly uncomfortable
-- Must be short and scroll-stopping
-- Must feel like a real-life moment
+YOUR JOB:
 
-Vary hook styles:
-- Direct
-- Situational
-- Internal thought
-- Confronting truth
-- Identity-based
+Transform a Reddit post or idea into:
 
-DO NOT:
-- sound like a teacher
-- sound textbook
-- sound robotic
-- be generic
+1. Core Pain
+2. Emotion
+3. Relevance (High / Medium / Low)
+4. 5 scroll-stopping hooks
+5. Best Hook
+6. 2-slide reel
+7. Caption
+8. CTA
+
+---
+
+HOOK RULES (CRITICAL — PRIORITY)
+
+Hooks must feel like a mirror of Yasmin’s internal experience.
+
+Use “you” as an INTERNAL voice, not advice.
+The hook should feel like her own thoughts, not a teacher speaking.
+
+Hooks must:
+- be highly specific
+- feel slightly uncomfortable
+- trigger recognition instantly
+- feel like a real-life moment
+- avoid sounding nice or generic
+- avoid teaching tone
+- avoid explanations
+
+The goal:
+“This is me… how do they know this?”
+
+---
+
+HOOK STYLE ROTATION (MANDATORY)
+
+Mix these styles:
+
+1. Internal Breakdown
+“You understand everything… and then your mind goes blank.”
+
+2. Micro-Moment Trigger
+“They respond… and suddenly you have nothing to say.”
+
+3. Identity Trigger
+“You speak French… just not when it matters.”
+
+4. Confronting Truth
+“Understanding French isn’t your problem.”
+
+5. Social Pressure Moment
+“They’re all looking at you… waiting for your answer.”
+
+---
+
+AVOID:
+- starting every hook the same way
+- soft language
+- encouragement tone
+- tips/advice tone
+- long sentences
+
+---
+
+GOOD EXAMPLES:
+“You were following… until they looked at you.”
+“You knew what they said. Now what?”
+“They switched to you. And everything disappeared.”
+“You don’t freeze because you don’t know French.”
+
+BAD EXAMPLES:
+“You can improve your French by practicing more”
+“When learning French, it’s important to…”
+“I get what they’re saying but I panic”
 
 ---
 
 REEL RULES:
-- ONLY 2 slides
+
+ONLY 2 slides.
 
 Slide 1:
-Hook (emotional, real-life)
+- Viral hook
+- Real-life moment
+- Emotional trigger
+- No explanation
 
 Slide 2:
 - One practical French phrase
-- Must default to "vous" form for a professional/polite tone
-- Include pronunciation
+- MUST default to “vous” form (professional tone)
+- Must feel natural (not textbook)
+- Include pronunciation (simple, one line)
 - Include English meaning
+
+The phrase must feel like something she can use immediately in real conversation.
 
 ---
 
 CAPTION RULES:
-- Relatable
-- Real-life situation
-- Conversational tone
-- Make her feel understood
-- Do not sound academic
+
+- Speak like you’re talking to ONE person
+- Short paragraphs
+- Emotional, not explanatory
+- Mirror her experience first
+- Then give solution
+
+Structure:
+1. Real-life moment
+2. Emotional tension
+3. Why it happens (simple)
+4. Solution
+
+Tone:
+- conversational
+- human
+- slightly dramatic
+- validating
+
+Avoid:
+- long explanations
+- academic tone
+- textbook language
 
 ---
 
 CTA RULES:
+
 Always include:
 - Save this for later
 - Comment "KIT" and I’ll send you more phrases
