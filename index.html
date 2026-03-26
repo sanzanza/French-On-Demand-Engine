@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>French On Demand Content Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">French On Demand</p>
+          <h1>Content Engine</h1>
+          <p class="sidebar-copy">
+            Turn Reddit posts and rough ideas into polished Instagram content for French learners in France.
+          </p>
+        </div>
+
+        <section class="settings-card">
+          <div class="section-heading">
+            <h2>Generation Settings</h2>
+          </div>
+          <label class="field">
+            <span>OpenAI API Key</span>
+            <input
+              id="apiKey"
+              type="password"
+              placeholder="Paste your API key to use AI generation"
+              autocomplete="off"
+            />
+          </label>
+          <label class="field">
+            <span>Model</span>
+            <input id="model" type="text" value="gpt-4.1-mini" autocomplete="off" />
+          </label>
+          <p class="field-help">
+            If no API key is provided, the app creates a local draft so you can still work and save ideas.
+          </p>
+        </section>
+
+        <section class="history-card">
+          <div class="section-heading">
+            <h2>Saved Outputs</h2>
+            <button id="clearHistoryBtn" class="ghost-button" type="button">Clear</button>
+          </div>
+          <div id="historyList" class="history-list"></div>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <header class="hero-card">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Build Reels, captions, and hooks from one raw idea</h2>
+          </div>
+          <div class="hero-actions">
+            <button id="generateBtn" class="primary-button" type="button">Generate</button>
+            <button id="saveBtn" class="secondary-button" type="button" disabled>Save</button>
+          </div>
+        </header>
+
+        <section class="input-card">
+          <div class="section-heading">
+            <h2>Input</h2>
+          </div>
+          <label class="field">
+            <span>Paste Reddit post or idea</span>
+            <textarea
+              id="sourceInput"
+              rows="8"
+              placeholder="Paste the Reddit post, comment, or rough content idea here..."
+            ></textarea>
+          </label>
+          <div class="input-footer">
+            <p id="statusText" class="status-text">Ready to generate.</p>
+          </div>
+        </section>
+
+        <section class="output-grid">
+          <article class="output-card">
+            <div class="card-top">
+              <h3>Strategic Insight</h3>
+              <button class="copy-button" type="button" data-copy-target="insightBlock">Copy</button>
+            </div>
+            <div id="insightBlock" class="stacked-output empty-state">
+              Generate content to see the core pain, emotion, and relevance.
+            </div>
+          </article>
+
+          <article class="output-card">
+            <div class="card-top">
+              <h3>Hooks</h3>
+              <button class="copy-button" type="button" data-copy-target="hooksBlock">Copy</button>
+            </div>
+            <div id="hooksBlock" class="stacked-output empty-state">
+              Your 5 hook variations and best hook will appear here.
+            </div>
+          </article>
+
+          <article class="output-card wide-card">
+            <div class="card-top">
+              <h3>Reel Script</h3>
+              <button class="copy-button" type="button" data-copy-target="reelBlock">Copy</button>
+            </div>
+            <div id="reelBlock" class="stacked-output empty-state">
+              The two-slide reel script will appear here.
+            </div>
+          </article>
+
+          <article class="output-card wide-card">
+            <div class="card-top">
+              <h3>Caption</h3>
+              <button class="copy-button" type="button" data-copy-target="captionBlock">Copy</button>
+            </div>
+            <div id="captionBlock" class="stacked-output empty-state">Your caption will appear here.</div>
+          </article>
+
+          <article class="output-card wide-card">
+            <div class="card-top">
+              <h3>CTA</h3>
+              <button class="copy-button" type="button" data-copy-target="ctaBlock">Copy</button>
+            </div>
+            <div id="ctaBlock" class="stacked-output empty-state">Your CTA will appear here.</div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
