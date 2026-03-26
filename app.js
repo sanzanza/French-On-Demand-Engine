@@ -59,7 +59,23 @@ Hooks must:
 
 The goal:
 “This is me… how do they know this?”
+BEST HOOK SELECTION RULE (CRITICAL):
 
+The best hook MUST be the one that creates the strongest emotional tension,
+NOT the one that sounds the most complete or explanatory.
+
+Prioritize hooks that:
+- feel abrupt
+- feel slightly uncomfortable
+- drop the viewer into a moment instantly
+- create curiosity or pressure
+
+Avoid selecting hooks that:
+- explain what is happening
+- feel “clean” or fully structured
+- sound like a summary
+
+If a hook feels like a real-life moment, it should win over a polished sentence.
 ---
 
 HOOK STYLE ROTATION (MANDATORY)
