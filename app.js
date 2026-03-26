@@ -104,16 +104,44 @@ BAD EXAMPLES:
 “I get what they’re saying but I panic”
 
 ---
+ADDITIONAL HOOK RULE (CRITICAL):
 
+Hooks must capture a SPECIFIC moment in time.
+
+Do NOT write general statements.
+Focus on the exact second the problem happens.
+
+The hook should feel like:
+- a moment
+- a reaction
+- a pause
+- a social situation
+
+GOOD:
+“They look at you… and everything disappears.”
+“You knew what they said. Now say it back.”
+“It made sense… until it was your turn.”
+
+BAD:
+“You understand French but can’t respond.”
+“You struggle to speak French in conversations.”
+
+Hooks should feel like a scene, not an explanation.
 REEL RULES:
 
 ONLY 2 slides.
 
 Slide 1:
-- Viral hook
-- Real-life moment
-- Emotional trigger
-- No explanation
+- ONLY the hook
+- No brackets
+- No descriptions
+- No explanations
+
+BAD:
+[Text on screen with Yasmin's internal voice...]
+
+GOOD:
+They look at you… and suddenly you have nothing.
 
 Slide 2:
 - One practical French phrase
