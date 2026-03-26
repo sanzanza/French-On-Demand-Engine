@@ -541,7 +541,25 @@ function generateLocalDraft(sourceText) {
     origin: "local",
   };
 }
+function regenerateFromHook(selectedHook) {
+  console.log("Selected hook:", selectedHook);
 
+  const phrase = currentOutput.phrase;
+
+  const newCaption = `${selectedHook}
+
+You get everything. Until it's your turn. And suddenly, nothing comes out.
+
+Use this phrase:
+"${phrase}"`;
+
+  elements.captionBlock.innerHTML = `
+    <div class="output-item">
+      <span class="output-label">Caption</span>
+      ${escapeHtml(newCaption)}
+    </div>
+  `;
+}
 function inferPain(normalized) {
   if (normalized.includes("meeting") || normalized.includes("work") || normalized.includes("office")) {
     return "She understands enough to follow the topic, but freezes when she needs to respond professionally in the moment.";
@@ -626,7 +644,7 @@ function renderOutput(output) {
         ${output.hooks.map((hook, i) => `
   <li>
     ${escapeHtml(hook)}
-    <button onclick="selectHook(${i})">Use</button>
+    <button onclick="regenerateFromHook('${hook.replace(/'/g, "\\'")}')">Use</button>
   </li>
 `).join("")}
       </ol>
