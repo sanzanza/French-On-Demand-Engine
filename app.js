@@ -116,7 +116,45 @@ The hook should feel like:
 - a reaction
 - a pause
 - a social situation
+---
 
+INTENSITY RULE (VERY IMPORTANT):
+
+Hooks must NOT feel safe or generic.
+
+Avoid:
+- explaining the situation
+- neutral phrasing
+- soft wording
+
+Hooks must feel:
+- sharp
+- slightly uncomfortable
+- like a real moment happening
+
+Focus on the exact second things go wrong.
+
+---
+
+WEAK:
+"You understood everything but now you can't respond."
+
+STRONG:
+"You knew exactly what they said… until they looked at you."
+
+---
+
+WEAK:
+"You struggle to speak French in conversations."
+
+STRONG:
+"They look at you… and suddenly you have nothing."
+
+---
+
+RULE:
+If the hook feels like an explanation → rewrite it.
+If it feels like a moment → it's correct.
 GOOD:
 “They look at you… and everything disappears.”
 “You knew what they said. Now say it back.”
