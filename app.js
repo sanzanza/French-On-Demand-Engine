@@ -783,11 +783,14 @@ function regenerateFromHook(index) {
 
   const phrase = output.reel?.slide2 || "";
   const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
-
+const styles = ["emotional", "direct", "relatable"];
+const style = styles[Math.floor(Math.random() * styles.length)];
   let newCaption = "";
 
 if (selectedHook.includes("switch to English")) {
-  newCaption = `${selectedHook}
+
+  if (style === "emotional") {
+    newCaption = `${selectedHook}
 
 You understood.
 
@@ -800,6 +803,33 @@ the moment is gone.
 
 Use this instead:
 ${phrase}`;
+  }
+
+  else if (style === "direct") {
+    newCaption = `${selectedHook}
+
+You’re not bad at French.
+
+You’re just not fast enough yet.
+
+And that’s why they switch to English.
+
+Use this instead:
+${phrase}`;
+  }
+
+  else {
+    newCaption = `${selectedHook}
+
+That moment when you hesitate…
+
+And they switch to English immediately.
+
+Like you didn’t even try.
+
+Use this instead:
+${phrase}`;
+  }
 }
 
 else if (
