@@ -784,25 +784,56 @@ function regenerateFromHook(index) {
   const phrase = output.reel?.slide2 || "";
   const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
 
-  const newCaption = `${selectedHook}
+  let newCaption = "";
+
+if (selectedHook.includes("switch to English")) {
+  newCaption = `${selectedHook}
+
+You understood.
+
+You just couldn’t respond fast enough.
+
+So they switch to English.
+
+And just like that…
+the moment is gone.
+
+Use this instead:
+${phrase}`;
+}
+
+else if (
+  selectedHook.includes("nothing comes out") ||
+  selectedHook.includes("mind") ||
+  selectedHook.includes("your turn")
+) {
+  newCaption = `${selectedHook}
 
 You understood everything.
 
-Until it was your turn to speak.
+Until it was your turn.
 
 And suddenly…
 nothing comes out.
 
-Not because you don’t know French.
+Your mind goes blank.
 
-But because you didn’t have the words ready fast enough.
-
-So they switch to English.
-
-And just like that… the moment is gone.
-
-Here’s what you say instead:
+Use this instead:
 ${phrase}`;
+}
+
+else {
+  newCaption = `${selectedHook}
+
+You *do* speak French.
+
+Just not when it matters.
+
+Because it doesn’t come out fast enough.
+
+Use this instead:
+${phrase}`;
+}
 
   elements.reelBlock.innerHTML = `
     <div class="output-item"><span class="output-label">Slide 1</span>${escapeHtml(selectedHook)}</div>
