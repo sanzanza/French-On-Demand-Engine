@@ -63,7 +63,22 @@ The goal:
 ---
 
 HOOK STYLE ROTATION (MANDATORY)
+VARIATION RULE (CRITICAL):
 
+Each hook MUST feel different in structure and rhythm.
+
+Avoid repeating the same pattern like:
+- “You understood… then…”
+- “You get… but…”
+
+Rotate between these structures:
+- Direct moment: “They look at you… and everything disappears.”
+- Contrast: “It made sense… until it was your turn.”
+- Tension: “You know exactly what they said. Now say it back.”
+- Identity: “It’s not your French. It’s what happens when you have to respond.”
+- Social pressure: “Everyone’s waiting… and you have nothing.”
+
+If multiple hooks feel similar, rewrite them until each feels unique.
 Mix these styles:
 
 1. Internal Breakdown
