@@ -644,7 +644,7 @@ function renderOutput(output) {
         ${output.hooks.map((hook, i) => `
   <li>
     ${escapeHtml(hook)}
-    <button onclick="regenerateFromHook('${hook.replace(/'/g, "\\'")}')">Use</button>
+    <button onclick="regenerateFromHook(${i})">Use</button>
   </li>
 `).join("")}
       </ol>
@@ -775,8 +775,36 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 }
-function selectHook(index) {
+function regenerateFromHook(index) {
   const output = JSON.parse(localStorage.getItem("fod_latest_output"));
-  selectedHook = output.hooks[index];
-  console.log(selectedHook);
+  const selectedHook = output.hooks[index];
+
+  console.log("Selected hook:", selectedHook);
+
+  const phrase = output.reel?.slide2 || "";
+  const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
+
+  const newCaption = `${selectedHook}
+
+You get everything. Until it's your turn. And suddenly, nothing comes out.
+
+Use this phrase:
+${phrase}`;
+
+  elements.reelBlock.innerHTML = `
+    <div class="output-item"><span class="output-label">Slide 1</span>${escapeHtml(selectedHook)}</div>
+    <div class="output-item"><span class="output-label">Slide 2</span>${escapeHtml(phrase).replace(/\n/g, "<br />")}</div>
+  `;
+
+  elements.captionBlock.innerHTML = `
+    <div class="output-item">
+      <span class="output-label">Caption</span>${escapeHtml(newCaption).replace(/\n/g, "<br />")}
+    </div>
+  `;
+
+  elements.ctaBlock.innerHTML = `
+    <div class="output-item">
+      <span class="output-label">CTA</span>${escapeHtml(cta)}
+    </div>
+  `;
 }
