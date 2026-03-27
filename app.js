@@ -877,19 +877,19 @@ ${phrase}`;
   }
 
   else if (style === "direct") {
-   newCaption = `${selectedHook}
+  newCaption = `${selectedHook}
 
-You had it.
+You don’t have a French problem.
 
-You really did.
+You have a speed problem.
 
-But the moment came too fast.
+You understand.
 
-And it slipped.
+But you can’t respond fast enough.
 
 Use this instead:
 ${phrase}`;
-  }
+}
 
   else {
     newCaption = `${selectedHook}
