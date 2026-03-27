@@ -512,13 +512,17 @@ function matchSection(text, startLabel, endLabel) {
   return match ? match[1].trim() : "";
 }
 function shortenHook(text) {
-  if (text.length <= 80) return text;
+  let short = text
+    .replace(/\.\.\..*/g, "")
+    .replace(/ and suddenly.*/i, "")
+    .replace(/ and you.*/i, "")
+    .replace(/ because.*/i, "")
+    .replace(/ until.*/i, "")
+    .trim();
 
-  const trimmed = text.split(".")[0];
+  if (short.length <= 55) return short;
 
-  return trimmed.length > 80
-    ? trimmed.slice(0, 80).trim() + "..."
-    : trimmed;
+  return short.slice(0, 55).trim() + "...";
 }
 function generateLocalDraft(sourceText) {
   const normalized = sourceText.toLowerCase();
