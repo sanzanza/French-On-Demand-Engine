@@ -563,7 +563,7 @@ function generateLocalDraft(sourceText) {
   const emotion = inferEmotion(normalized);
   const relevance = inferRelevance(normalized);
   const hooks = buildHooks(pain, emotion, sourceText).map(hook => shortenHook(hook));
-  const bestHook = hooks[0];
+  const bestHook = hooks.sort((a, b) => scoreHook(b) - scoreHook(a))[0];
   const phrase = inferPhrase(normalized);
   const caption = `That moment when the conversation moves fast, everyone keeps going, and you are still trying to decode what was just said. ${pain} This is exactly why ready-to-use phrases matter in real life, especially when you want to stay composed at work and not default to silence.`;
   const cta = `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
