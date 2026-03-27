@@ -877,13 +877,15 @@ ${phrase}`;
   }
 
   else if (style === "direct") {
-    newCaption = `${selectedHook}
+   newCaption = `${selectedHook}
 
-You’re not bad at French.
+You had it.
 
-You’re just not fast enough yet.
+You really did.
 
-And that’s why they switch to English.
+But the moment came too fast.
+
+And it slipped.
 
 Use this instead:
 ${phrase}`;
