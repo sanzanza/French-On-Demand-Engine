@@ -511,13 +511,21 @@ function matchSection(text, startLabel, endLabel) {
   const match = text.match(regex);
   return match ? match[1].trim() : "";
 }
+function shortenHook(text) {
+  if (text.length <= 80) return text;
 
+  const trimmed = text.split(".")[0];
+
+  return trimmed.length > 80
+    ? trimmed.slice(0, 80).trim() + "..."
+    : trimmed;
+}
 function generateLocalDraft(sourceText) {
   const normalized = sourceText.toLowerCase();
   const pain = inferPain(normalized);
   const emotion = inferEmotion(normalized);
   const relevance = inferRelevance(normalized);
-  const hooks = buildHooks(pain, emotion, sourceText);
+  const hooks = buildHooks(pain, emotion, sourceText).map(hook => shortenHook(hook));
   const bestHook = hooks[0];
   const phrase = inferPhrase(normalized);
   const caption = `That moment when the conversation moves fast, everyone keeps going, and you are still trying to decode what was just said. ${pain} This is exactly why ready-to-use phrases matter in real life, especially when you want to stay composed at work and not default to silence.`;
