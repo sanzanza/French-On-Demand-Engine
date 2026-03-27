@@ -608,13 +608,12 @@ function inferRelevance(normalized) {
 }
 
 function buildHooks(pain, emotion, sourceText) {
-  const scene = sourceText.split(/[.!?\n]/).find(Boolean)?.trim() || "the conversation keeps moving without you";
   return [
-    `Everyone kept talking, and you were still translating in your head.`,
-    `That moment in a meeting when ${truncate(scene, 52)}.`,
-    `Say something smart. Say something smart. Say something smart.`,
-    `Understanding French is not the same as surviving real conversations.`,
-    `The competent woman disappears the second the room switches to fast French.`,
+    "They stop. You freeze.",
+    "You hear it. Nothing comes out.",
+    "Your turn. Your mind goes blank.",
+    "You know it. You can’t say it.",
+    "They’re waiting. You’ve got nothing."
   ];
 }
 
