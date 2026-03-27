@@ -520,9 +520,15 @@ function shortenHook(text) {
     .replace(/ until.*/i, "")
     .trim();
 
-  if (short.length <= 55) return short;
+  // 🔥 NEW: split into punchy structure
+  if (short.includes(" and ")) {
+    const parts = short.split(" and ");
+    return parts[0].trim() + ". " + parts[1].trim();
+  }
 
-  return short.slice(0, 55).trim() + "...";
+  if (short.length <= 50) return short;
+
+  return short.slice(0, 50).trim() + "...";
 }
 function generateLocalDraft(sourceText) {
   const normalized = sourceText.toLowerCase();
