@@ -392,15 +392,28 @@ function persistSettings() {
 function scoreHook(hook) {
   let score = 0;
 
-  if (hook.includes(".")) score += 2;
-  if (hook.split(" ").length <= 8) score += 2;
+  const words = hook.split(" ").length;
+
+  // shorter = better
+  if (words <= 6) score += 3;
+  else if (words <= 8) score += 2;
+
+  // emotional triggers
   if (
     hook.includes("freeze") ||
     hook.includes("blank") ||
-    hook.includes("nothing") ||
-    hook.includes("wait") ||
-    hook.includes("can’t")
+    hook.includes("nothing")
   ) score += 3;
+
+  // tension words
+  if (
+    hook.includes("wait") ||
+    hook.includes("turn") ||
+    hook.includes("hear")
+  ) score += 2;
+
+  // BONUS: broken rhythm (2 short sentences)
+  if (hook.split(".").length >= 2) score += 2;
 
   return score;
 }
