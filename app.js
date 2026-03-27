@@ -389,7 +389,21 @@ function persistSettings() {
   localStorage.setItem(STORAGE_KEYS.apiKey, elements.apiKey.value.trim());
   localStorage.setItem(STORAGE_KEYS.model, elements.model.value.trim());
 }
+function scoreHook(hook) {
+  let score = 0;
 
+  if (hook.includes(".")) score += 2;
+  if (hook.split(" ").length <= 8) score += 2;
+  if (
+    hook.includes("freeze") ||
+    hook.includes("blank") ||
+    hook.includes("nothing") ||
+    hook.includes("wait") ||
+    hook.includes("can’t")
+  ) score += 3;
+
+  return score;
+}
 async function handleGenerate() {
   const sourceText = elements.sourceInput.value.trim();
   if (!sourceText) {
