@@ -854,88 +854,34 @@ function regenerateFromHook(index) {
 
   const phrase = output.reel?.slide2 || "";
   const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
-const styles = ["emotional", "direct", "relatable"];
-const style = styles[Math.floor(Math.random() * styles.length)];
+const structures = ["internal", "moment", "callout", "contrast", "identity", "story"];
+const structure = structures[Math.floor(Math.random() * structures.length)];
   let newCaption = "";
 
-if (selectedHook.includes("switch to English")) {
+let newCaption = `${selectedHook}\n\n`;
 
-  if (style === "emotional") {
-    newCaption = `${selectedHook}
-
-You understood.
-
-You just couldn’t respond fast enough.
-
-So they switch to English.
-
-And just like that…
-the moment is gone.
-
-Use this instead:
-${phrase}`;
-  }
-
-  else if (style === "direct") {
-  newCaption = `${selectedHook}
-
-You don’t have a French problem.
-
-You have a speed problem.
-
-You understand.
-
-But you can’t respond fast enough.
-
-Use this instead:
-${phrase}`;
+if (structure === "internal") {
+  newCaption += `You had it.\nThen it disappeared.\n\nUse this instead:\n${phrase}`;
 }
 
-  else {
-    newCaption = `${selectedHook}
-
-That moment when you hesitate…
-
-And they switch to English immediately.
-
-Like you didn’t even try.
-
-Use this instead:
-${phrase}`;
-  }
+else if (structure === "moment") {
+  newCaption += `Everyone looks at you.\nYou hesitate.\nYou search for words…\nNothing.\n\nUse this instead:\n${phrase}`;
 }
 
-else if (
-  selectedHook.includes("nothing comes out") ||
-  selectedHook.includes("mind") ||
-  selectedHook.includes("your turn")
-) {
-  newCaption = `${selectedHook}
-
-You understood everything.
-
-Until it was your turn.
-
-And suddenly…
-nothing comes out.
-
-Your mind goes blank.
-
-Use this instead:
-${phrase}`;
+else if (structure === "callout") {
+  newCaption += `You understand French.\nYou just can’t respond fast enough.\n\nUse this instead:\n${phrase}`;
 }
 
-else {
-  newCaption = `${selectedHook}
+else if (structure === "contrast") {
+  newCaption += `You understand everything…\nuntil it’s your turn.\n\nUse this instead:\n${phrase}`;
+}
 
-You *do* speak French.
+else if (structure === "identity") {
+  newCaption += `You *do* speak French.\nJust not under pressure.\n\nUse this instead:\n${phrase}`;
+}
 
-Just not when it matters.
-
-Because it doesn’t come out fast enough.
-
-Use this instead:
-${phrase}`;
+else if (structure === "story") {
+  newCaption += `It was going well.\nThen they paused.\nThen everything disappeared.\n\nUse this instead:\n${phrase}`;
 }
 
   elements.reelBlock.innerHTML = `
