@@ -42,7 +42,34 @@ Transform a Reddit post or idea into:
 ---
 
 HOOK RULES (CRITICAL — PRIORITY)
+HOOK LENGTH RULES (CRITICAL):
+- Each hook must be short.
+- Maximum 8 words if possible.
+- Maximum 12 words absolute limit.
+- Hooks must feel punchy, not explanatory.
+- Do not write long descriptive sentences.
+- Break rhythm when helpful.
 
+GOOD:
+- Your turn. You freeze.
+- You hear it. Nothing comes out.
+- They wait. You go blank.
+- You know it. You can’t say it.
+- They switch. You shrink.
+
+BAD:
+- Everyone kept talking and you were still translating in your head.
+- You understand French but struggle to respond in conversations.
+- It was your turn to speak and suddenly your mind went blank.
+
+Hooks must feel like:
+- a moment
+- a hit
+- pressure
+- internal reaction
+
+Do NOT explain the situation fully.
+Do NOT write like a caption.
 Hooks must feel like a mirror of Yasmin’s internal experience.
 
 Use “you” as an INTERNAL voice, not advice.
