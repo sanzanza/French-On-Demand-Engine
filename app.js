@@ -851,30 +851,71 @@ function regenerateFromHook(index) {
   const selectedHook = output.hooks[index];
 const phraseGroups = {
   blank: [
-    `J’avoue… là j’ai un blanc.`,
-    `Franchement… là j’ai un blanc.`,
-    `Là… j’ai un blanc.`,
-    `Attendez… là j’ai un blanc.`,
-    `J’avoue, je sais plus quoi dire là.`
+    `J’avoue… là j’ai un blanc.
+(zhah-voo… lah zhay uh blahn)
+I’m blanking right now.`,
+
+    `Franchement… là j’ai un blanc.
+(frahnsh-mahn… lah zhay uh blahn)
+Honestly… my mind just went blank.`,
+
+    `Là… j’ai un blanc.
+(lah… zhay uh blahn)
+My mind just went blank.`,
+
+    `Attendez… là j’ai un blanc.
+(ah-tahn-day… lah zhay uh blahn)
+Wait… my mind just went blank.`,
+
+    `J’avoue, je sais plus quoi dire là.
+(zhah-voo, zhuh say ploo kwah deer lah)
+Honestly, I don’t know what to say anymore.`
   ],
 
   repeat: [
-    `Vous pouvez répéter, s’il vous plaît ?`,
-    `Désolée, vous pouvez répéter ?`,
-    `Attendez, vous pouvez répéter ?`,
-    `Pardon, vous pouvez répéter ?`
+    `Vous pouvez répéter, s’il vous plaît ?
+(voo poo-vay ray-pay-tay, seel voo pleh)
+Could you repeat, please?`,
+
+    `Désolée, vous pouvez répéter ?
+(day-zo-lay, voo poo-vay ray-pay-tay)
+Sorry, could you repeat?`,
+
+    `Attendez, vous pouvez répéter ?
+(ah-tahn-day, voo poo-vay ray-pay-tay)
+Wait, could you repeat?`,
+
+    `Pardon, vous pouvez répéter ?
+(par-dohn, voo poo-vay ray-pay-tay)
+Sorry, could you repeat?`
   ],
 
   slowDown: [
-    `Vous pouvez parler un peu plus lentement ?`,
-    `Désolée, vous pouvez parler plus lentement ?`,
-    `Vous pouvez parler un peu moins vite ?`
+    `Vous pouvez parler un peu plus lentement ?
+(voo poo-vay par-lay uhn puh plu lahnt-mahn)
+Could you speak a little more slowly?`,
+
+    `Désolée, vous pouvez parler plus lentement ?
+(day-zo-lay, voo poo-vay par-lay plu lahnt-mahn)
+Sorry, could you speak more slowly?`,
+
+    `Vous pouvez parler un peu moins vite ?
+(voo poo-vay par-lay uhn puh mwahn veet)
+Could you speak a little less fast?`
   ],
 
   clarify: [
-    `Vous voulez dire quoi exactement ?`,
-    `Je suis pas sûre de comprendre, vous pouvez préciser ?`,
-    `Vous pouvez préciser un peu ?`
+    `Vous voulez dire quoi exactement ?
+(voo voo-lay deer kwah egzakt-mahn)
+What exactly do you mean?`,
+
+    `Je suis pas sûre de comprendre, vous pouvez préciser ?
+(zhuh swee pah sur duh kohm-prahn-dr, voo poo-vay pray-see-zay)
+I’m not sure I understand, could you clarify?`,
+
+    `Vous pouvez préciser un peu ?
+(voo poo-vay pray-see-zay uhn puh)
+Could you clarify a little?`
   ]
 };
   console.log("Selected hook:", selectedHook);
