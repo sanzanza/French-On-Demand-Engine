@@ -876,7 +876,17 @@ if (structure === "internal") {
 }
 
 else if (structure === "moment") {
-  newCaption += `Everyone looks at you.\nYou hesitate.\nYou search for words…\nNothing.\n\nUse this instead:\n${phrase}`;
+  const variations = [
+    `They ask you something in French.\nYou understood it.\nBut when it’s time to answer… nothing comes out.\n\nUse this instead:\n${phrase}`,
+
+    `The conversation is flowing in French.\nThen someone turns to you.\nAnd your mind goes blank.\n\nUse this instead:\n${phrase}`,
+
+    `You’re following the French conversation.\nThen it’s your turn to speak.\nAnd suddenly you have nothing.\n\nUse this instead:\n${phrase}`,
+
+    `You understand what they said in French.\nYou just can’t answer fast enough.\n\nUse this instead:\n${phrase}`
+  ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
 else if (structure === "callout") {
