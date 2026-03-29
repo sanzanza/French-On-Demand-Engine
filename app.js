@@ -974,7 +974,19 @@ else if (block === "story") {
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
+const transitions = [
+  "Next time, say:",
+  "Here’s what you can say:",
+  "Say this instead:",
+  "In that moment, say:",
+  "Try this:",
+  "This is what you say:",
+  "Here’s your go-to phrase:"
+];
 
+const selectedTransition = transitions[Math.floor(Math.random() * transitions.length)];
+
+newCaption += `\n\n${selectedTransition}\n\n${phrase.trim()}`;
   elements.reelBlock.innerHTML = `
     <div class="output-item"><span class="output-label">Slide 1</span>${escapeHtml(selectedHook)}</div>
     <div class="output-item"><span class="output-label">Slide 2</span>${escapeHtml(phrase).replace(/\n/g, "<br />")}</div>
