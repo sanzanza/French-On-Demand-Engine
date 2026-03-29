@@ -986,7 +986,9 @@ const transitions = [
 
 const selectedTransition = transitions[Math.floor(Math.random() * transitions.length)];
 
-newCaption += `\n\n${selectedTransition}\n\n${phrase.trim()}`;
+const captionPhrase = phrase.trim().split("\n")[0];
+
+newCaption += `\n\n${selectedTransition}\n\n${captionPhrase}`;
   elements.reelBlock.innerHTML = `
     <div class="output-item"><span class="output-label">Slide 1</span>${escapeHtml(selectedHook)}</div>
     <div class="output-item"><span class="output-label">Slide 2</span>${escapeHtml(phrase).replace(/\n/g, "<br />")}</div>
