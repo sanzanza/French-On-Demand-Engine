@@ -852,7 +852,19 @@ function regenerateFromHook(index) {
 
   console.log("Selected hook:", selectedHook);
 
-  const phrase = output.reel?.slide2 || "";
+  let phraseType = "blank";
+
+// basic mapping (we’ll refine later)
+if (selectedHook.includes("repeat") || selectedHook.includes("understand")) {
+  phraseType = "repeat";
+} else if (selectedHook.includes("fast") || selectedHook.includes("too fast")) {
+  phraseType = "slowDown";
+} else if (selectedHook.includes("what do they mean") || selectedHook.includes("confused")) {
+  phraseType = "clarify";
+}
+
+const group = phraseGroups[phraseType];
+const phrase = group[Math.floor(Math.random() * group.length)];
   const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
 const structures = ["internal", "moment", "callout", "contrast", "identity", "story"];
 const structure = structures[Math.floor(Math.random() * structures.length)];
@@ -974,6 +986,34 @@ else if (block === "story") {
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
+  const phraseGroups = {
+  blank: [
+    `J’avoue… là j’ai un blanc.`,
+    `Franchement… là j’ai un blanc.`,
+    `Là… j’ai un blanc.`,
+    `Attendez… là j’ai un blanc.`,
+    `J’avoue, je sais plus quoi dire là.`
+  ],
+
+  repeat: [
+    `Vous pouvez répéter, s’il vous plaît ?`,
+    `Désolée, vous pouvez répéter ?`,
+    `Attendez, vous pouvez répéter ?`,
+    `Pardon, vous pouvez répéter ?`
+  ],
+
+  slowDown: [
+    `Vous pouvez parler un peu plus lentement ?`,
+    `Désolée, vous pouvez parler plus lentement ?`,
+    `Vous pouvez parler un peu moins vite ?`
+  ],
+
+  clarify: [
+    `Vous voulez dire quoi exactement ?`,
+    `Je suis pas sûre de comprendre, vous pouvez préciser ?`,
+    `Vous pouvez préciser un peu ?`
+  ]
+};
 const transitions = [
   "Next time, say:",
   "Here’s what you can say:",
