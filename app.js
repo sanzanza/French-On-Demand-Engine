@@ -861,15 +861,15 @@ let newCaption = `${selectedHook}\n\n`;
 
 if (structure === "internal") {
   const variations = [
-    `You understood everything in French.\nYou just couldn’t say it.\n\nUse this instead:\n${phrase}`,
+    `You understood everything in French.\nYou just couldn’t say it.`,
 
-    `You knew exactly what to say in French.\nBut it wouldn’t come out.\n\nUse this instead:\n${phrase}`,
+    `You knew exactly what to say in French.\nBut it wouldn’t come out.`,
 
-    `It was clear in your head—in French.\nBut your mouth didn’t cooperate.\n\nUse this instead:\n${phrase}`,
+    `It was clear in your head—in French.\nBut your mouth didn’t cooperate.`,
 
-    `You had the answer in French.\nRight there.\nThen it disappeared.\n\nUse this instead:\n${phrase}`,
+    `You had the answer in French.\nRight there.\nThen it disappeared.`,
 
-    `You understood the question in French.\nYou just froze when it was your turn.\n\nUse this instead:\n${phrase}`
+    `You understood the question in French.\nYou just froze when it was your turn.`
   ];
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
@@ -877,13 +877,13 @@ if (structure === "internal") {
 
 else if (structure === "moment") {
   const variations = [
-    `They ask you something in French.\nYou understood it.\nBut when it’s time to answer… nothing comes out.\n\nUse this instead:\n${phrase}`,
+    `They ask you something in French.\nYou understood it.\nBut when it’s time to answer… nothing comes out.`,
 
-    `The conversation is flowing in French.\nThen someone turns to you.\nAnd your mind goes blank.\n\nUse this instead:\n${phrase}`,
+    `The conversation is flowing in French.\nThen someone turns to you.\nAnd your mind goes blank.`,
 
-    `You’re following the French conversation.\nThen it’s your turn to speak.\nAnd suddenly you have nothing.\n\nUse this instead:\n${phrase}`,
+    `You’re following the French conversation.\nThen it’s your turn to speak.\nAnd suddenly you have nothing.`,
 
-    `You understand what they said in French.\nYou just can’t answer fast enough.\n\nUse this instead:\n${phrase}`
+    `You understand what they said in French.\nYou just can’t answer fast enough.`
   ];
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
@@ -891,15 +891,15 @@ else if (structure === "moment") {
 
 else if (structure === "callout") {
   const variations = [
-    `You don’t have a French problem.\nYou have a pressure problem.\n\nUse this instead:\n${phrase}`,
+    `You don’t have a French problem.\nYou have a pressure problem.`,
 
-    `It’s not your French.\nIt’s the moment.\n\nUse this instead:\n${phrase}`,
+    `It’s not your French.\nIt’s the moment.`,
 
-    `You understand French.\nYou just freeze when it matters.\n\nUse this instead:\n${phrase}`,
+    `You understand French.\nYou just freeze when it matters.`,
 
-    `Your problem isn’t understanding French.\nIt’s responding under pressure.\n\nUse this instead:\n${phrase}`,
+    `Your problem isn’t understanding French.\nIt’s responding under pressure.`,
 
-    `You already know enough French.\nYou just can’t access it in real time.\n\nUse this instead:\n${phrase}`
+    `You already know enough French.\nYou just can’t access it in real time.`
   ];
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
@@ -907,15 +907,15 @@ else if (structure === "callout") {
 
 else if (structure === "contrast") {
   const variations = [
-    `You understand French.\nUntil it’s time to answer in French.\n\nUse this instead:\n${phrase}`,
+    `You understand French.\nUntil it’s time to answer in French.`,
 
-    `Following the conversation is one thing.\nResponding in real time is another.\n\nUse this instead:\n${phrase}`,
+    `Following the conversation is one thing.\nResponding in real time is another.`,
 
-    `Understanding French feels good.\nSpeaking it under pressure is different.\n\nUse this instead:\n${phrase}`,
+    `Understanding French feels good.\nSpeaking it under pressure is different.`,
 
-    `You can follow the French conversation.\nThat doesn’t mean you’re ready to reply.\n\nUse this instead:\n${phrase}`,
+    `You can follow the French conversation.\nThat doesn’t mean you’re ready to reply.`,
 
-    `You know more French than you can actually use on the spot.\n\nUse this instead:\n${phrase}`
+    `You know more French than you can actually use on the spot.`
   ];
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
@@ -923,15 +923,15 @@ else if (structure === "contrast") {
 
 else if (structure === "identity") {
   const variations = [
-    `You’re not “bad” at French.\nYou just panic when it’s your turn.\n\nUse this instead:\n${phrase}`,
+    `You’re not “bad” at French.\nYou just panic when it’s your turn.`,
 
-    `You’re someone who understands French.\nYou just don’t trust yourself to speak it yet.\n\nUse this instead:\n${phrase}`,
+    `You’re someone who understands French.\nYou just don’t trust yourself to speak it yet.`,
 
-    `You do speak French.\nJust not when all eyes are on you.\n\nUse this instead:\n${phrase}`,
+    `You do speak French.\nJust not when all eyes are on you.`,
 
-    `You’re not a beginner.\nYou just freeze in real conversations.\n\nUse this instead:\n${phrase}`,
+    `You’re not a beginner.\nYou just freeze in real conversations.`,
 
-    `You’re closer than you think in French.\nYou just shut down under pressure.\n\nUse this instead:\n${phrase}`
+    `You’re closer than you think in French.\nYou just shut down under pressure.`
   ];
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
