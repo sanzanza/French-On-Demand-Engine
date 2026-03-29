@@ -861,11 +861,19 @@ let newCaption = `${selectedHook}\n\n`;
 
 if (structure === "internal") {
   const variations = [
-    `You had it.\nThen it disappeared.\n\nUse this instead:\n${phrase}`,
-    `It was clear in your head.\nThen nothing.\n\nUse this instead:\n${phrase}`,
-    `You knew exactly what to say.\nUntil you didn’t.\n\nUse this instead:\n${phrase}`,
-    `Right there.\nOn the tip of your tongue.\nGone.\n\nUse this instead:\n${phrase}`
+    `You understood everything in French.\nYou just couldn’t say it.\n\nUse this instead:\n${phrase}`,
+
+    `You knew exactly what to say in French.\nBut it wouldn’t come out.\n\nUse this instead:\n${phrase}`,
+
+    `It was clear in your head—in French.\nBut your mouth didn’t cooperate.\n\nUse this instead:\n${phrase}`,
+
+    `You had the answer in French.\nRight there.\nThen it disappeared.\n\nUse this instead:\n${phrase}`,
+
+    `You understood the question in French.\nYou just froze when it was your turn.\n\nUse this instead:\n${phrase}`
   ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
+}
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
