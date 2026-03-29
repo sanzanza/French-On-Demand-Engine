@@ -938,37 +938,39 @@ else if (structure === "identity") {
 }
 
 else if (block === "story") {
-  const variations = [
-    `The other day, I was speaking French… and everything was going fine.\nThen they switched to English.`,
+  let variations = [];
 
-    `I started the conversation in French.\nThey answered in English.\nJust like that.`,
-
-    `I said everything in French.\nThey looked at me… and replied in English.`,
-
-    `Everything was going well in French.\nUntil they switched to English mid-conversation.`,
-
-    `I was actually proud of my French in that moment.\nThen they answered me in English.`,
-
-    `You ever start a conversation in French…\nand they respond in English?`,
-
-    `It was a normal conversation in French.\nThen suddenly… English.`,
-
-    `I didn’t even struggle that time.\nStill got an answer in English.`,
-
-    `I spoke French the whole time.\nDidn’t matter. They switched anyway.`,
-
-    `You try to stay in French.\nThey don’t.`,
-
-    `It starts in French.\nIt ends in English.`,
-
-    `You’re doing everything right in French.\nBut somehow the conversation switches to English.`,
-
-    `You speak French.\nThey hear… English mode activated.`,
-
-    `You’re in a full French conversation.\nUntil you're not.`,
-
-    `One sentence in French.\nOne answer in English.`
-  ];
+  if (structure === "moment") {
+    variations = [
+      `The conversation started in French.\nThen they switched to English.`,
+      `Everything was going fine in French.\nUntil they answered in English.`,
+      `One sentence in French.\nOne reply in English.`
+    ];
+  } else if (structure === "internal") {
+    variations = [
+      `And in that moment, I started wondering if my French was that bad.`,
+      `That’s usually when the self-doubt kicks in.`,
+      `It makes you question yourself way more than it should.`
+    ];
+  } else if (structure === "callout") {
+    variations = [
+      `You ever start in French…\nand they respond in English?`,
+      `You try to keep it in French.\nThey don’t.`,
+      `You’re doing your part in French.\nThey switch anyway.`
+    ];
+  } else if (structure === "contrast") {
+    variations = [
+      `You can say it in French.\nThat doesn’t mean they’ll stay in French.`,
+      `Speaking French is one thing.\nKeeping the conversation in French is another.`,
+      `You start in French.\nThey finish in English.`
+    ];
+  } else {
+    variations = [
+      `I was speaking French.\nThey switched to English.`,
+      `It started in French.\nThen it changed.`,
+      `I tried to stay in French.\nIt didn’t last.`
+    ];
+  }
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
