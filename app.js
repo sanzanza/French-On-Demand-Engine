@@ -922,7 +922,19 @@ else if (structure === "contrast") {
 }
 
 else if (structure === "identity") {
-  newCaption += `You *do* speak French.\nJust not under pressure.\n\nUse this instead:\n${phrase}`;
+  const variations = [
+    `You’re not “bad” at French.\nYou just panic when it’s your turn.\n\nUse this instead:\n${phrase}`,
+
+    `You’re someone who understands French.\nYou just don’t trust yourself to speak it yet.\n\nUse this instead:\n${phrase}`,
+
+    `You do speak French.\nJust not when all eyes are on you.\n\nUse this instead:\n${phrase}`,
+
+    `You’re not a beginner.\nYou just freeze in real conversations.\n\nUse this instead:\n${phrase}`,
+
+    `You’re closer than you think in French.\nYou just shut down under pressure.\n\nUse this instead:\n${phrase}`
+  ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
 else if (structure === "story") {
