@@ -856,12 +856,18 @@ function regenerateFromHook(index) {
   const cta = output.cta || `Save this for later. Comment "KIT" and I’ll send you more phrases.`;
 const structures = ["internal", "moment", "callout", "contrast", "identity", "story"];
 const structure = structures[Math.floor(Math.random() * structures.length)];
-  let newCaption = "";
 
 let newCaption = `${selectedHook}\n\n`;
 
 if (structure === "internal") {
-  newCaption += `You had it.\nThen it disappeared.\n\nUse this instead:\n${phrase}`;
+  const variations = [
+    `You had it.\nThen it disappeared.\n\nUse this instead:\n${phrase}`,
+    `It was clear in your head.\nThen nothing.\n\nUse this instead:\n${phrase}`,
+    `You knew exactly what to say.\nUntil you didn’t.\n\nUse this instead:\n${phrase}`,
+    `Right there.\nOn the tip of your tongue.\nGone.\n\nUse this instead:\n${phrase}`
+  ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
 else if (structure === "moment") {
