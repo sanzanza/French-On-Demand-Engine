@@ -890,7 +890,19 @@ else if (structure === "moment") {
 }
 
 else if (structure === "callout") {
-  newCaption += `You understand French.\nYou just can’t respond fast enough.\n\nUse this instead:\n${phrase}`;
+  const variations = [
+    `You don’t have a French problem.\nYou have a pressure problem.\n\nUse this instead:\n${phrase}`,
+
+    `It’s not your French.\nIt’s the moment.\n\nUse this instead:\n${phrase}`,
+
+    `You understand French.\nYou just freeze when it matters.\n\nUse this instead:\n${phrase}`,
+
+    `Your problem isn’t understanding French.\nIt’s responding under pressure.\n\nUse this instead:\n${phrase}`,
+
+    `You already know enough French.\nYou just can’t access it in real time.\n\nUse this instead:\n${phrase}`
+  ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
 else if (structure === "contrast") {
