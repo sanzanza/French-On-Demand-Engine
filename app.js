@@ -849,18 +849,61 @@ function escapeHtml(value) {
 function regenerateFromHook(index) {
   const output = JSON.parse(localStorage.getItem("fod_latest_output"));
   const selectedHook = output.hooks[index];
+const phraseGroups = {
+  blank: [
+    `J’avoue… là j’ai un blanc.`,
+    `Franchement… là j’ai un blanc.`,
+    `Là… j’ai un blanc.`,
+    `Attendez… là j’ai un blanc.`,
+    `J’avoue, je sais plus quoi dire là.`
+  ],
 
+  repeat: [
+    `Vous pouvez répéter, s’il vous plaît ?`,
+    `Désolée, vous pouvez répéter ?`,
+    `Attendez, vous pouvez répéter ?`,
+    `Pardon, vous pouvez répéter ?`
+  ],
+
+  slowDown: [
+    `Vous pouvez parler un peu plus lentement ?`,
+    `Désolée, vous pouvez parler plus lentement ?`,
+    `Vous pouvez parler un peu moins vite ?`
+  ],
+
+  clarify: [
+    `Vous voulez dire quoi exactement ?`,
+    `Je suis pas sûre de comprendre, vous pouvez préciser ?`,
+    `Vous pouvez préciser un peu ?`
+  ]
+};
   console.log("Selected hook:", selectedHook);
 
   let phraseType = "blank";
 
 // basic mapping (we’ll refine later)
-if (selectedHook.includes("repeat") || selectedHook.includes("understand")) {
+if (
+  selectedHook.includes("didn’t understand") ||
+  selectedHook.includes("didn't understand") ||
+  selectedHook.includes("missed") ||
+  selectedHook.includes("didn’t catch") ||
+  selectedHook.includes("didn't catch")
+) {
   phraseType = "repeat";
-} else if (selectedHook.includes("fast") || selectedHook.includes("too fast")) {
+} else if (
+  selectedHook.includes("too fast") ||
+  selectedHook.includes("fast") ||
+  selectedHook.includes("speed")
+) {
   phraseType = "slowDown";
-} else if (selectedHook.includes("what do they mean") || selectedHook.includes("confused")) {
+} else if (
+  selectedHook.includes("what do they mean") ||
+  selectedHook.includes("confused") ||
+  selectedHook.includes("don’t get")
+) {
   phraseType = "clarify";
+} else {
+  phraseType = "blank";
 }
 
 const group = phraseGroups[phraseType];
@@ -986,34 +1029,7 @@ else if (block === "story") {
 
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
-  const phraseGroups = {
-  blank: [
-    `J’avoue… là j’ai un blanc.`,
-    `Franchement… là j’ai un blanc.`,
-    `Là… j’ai un blanc.`,
-    `Attendez… là j’ai un blanc.`,
-    `J’avoue, je sais plus quoi dire là.`
-  ],
-
-  repeat: [
-    `Vous pouvez répéter, s’il vous plaît ?`,
-    `Désolée, vous pouvez répéter ?`,
-    `Attendez, vous pouvez répéter ?`,
-    `Pardon, vous pouvez répéter ?`
-  ],
-
-  slowDown: [
-    `Vous pouvez parler un peu plus lentement ?`,
-    `Désolée, vous pouvez parler plus lentement ?`,
-    `Vous pouvez parler un peu moins vite ?`
-  ],
-
-  clarify: [
-    `Vous voulez dire quoi exactement ?`,
-    `Je suis pas sûre de comprendre, vous pouvez préciser ?`,
-    `Vous pouvez préciser un peu ?`
-  ]
-};
+  
 const transitions = [
   "Next time, say:",
   "Here’s what you can say:",
