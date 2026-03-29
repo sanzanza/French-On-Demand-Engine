@@ -875,9 +875,6 @@ if (structure === "internal") {
   newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
-  newCaption += variations[Math.floor(Math.random() * variations.length)];
-}
-
 else if (structure === "moment") {
   newCaption += `Everyone looks at you.\nYou hesitate.\nYou search for words…\nNothing.\n\nUse this instead:\n${phrase}`;
 }
