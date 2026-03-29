@@ -1086,6 +1086,31 @@ const selectedTransition = transitions[Math.floor(Math.random() * transitions.le
 const captionPhrase = phrase.trim().split("\n")[0];
 
 newCaption += `\n\n${selectedTransition}\n\n${captionPhrase}`;
+  const ctaVariations = [
+  `This is one of those phrases you’ll actually use.`,
+  `This is how you stay in French instead of switching to English.`,
+  `Small phrase… big difference in real conversations.`,
+  `This is what keeps the conversation going.`,
+  `If you’ve ever frozen like this, you need phrases like this.`,
+  `This is the kind of phrase that saves you in the moment.`
+];
+
+const actionCTA = [
+  `Save this. You’ll need it.\n\nComment “KIT” and I’ll send you more like this.`,
+  
+  `Save this for later.\n\nComment “KIT” and I’ll send you more real-life phrases.`,
+  
+  `Keep this one.\n\nComment “KIT” and I’ll send you more like this.`,
+  
+  `Don’t forget this.\n\nComment “KIT” and I’ll send you more phrases like this.`,
+  
+  `Save this so you don’t blank next time.\n\nComment “KIT” and I’ll send you more.`
+];
+
+const selectedCTA = ctaVariations[Math.floor(Math.random() * ctaVariations.length)];
+const selectedActionCTA = actionCTA[Math.floor(Math.random() * actionCTA.length)];
+
+newCaption += `\n\n${selectedCTA}\n\n${selectedActionCTA}`;
   elements.reelBlock.innerHTML = `
     <div class="output-item"><span class="output-label">Slide 1</span>${escapeHtml(selectedHook)}</div>
     <div class="output-item"><span class="output-label">Slide 2</span>${escapeHtml(phrase).replace(/\n/g, "<br />")}</div>
