@@ -906,7 +906,19 @@ else if (structure === "callout") {
 }
 
 else if (structure === "contrast") {
-  newCaption += `You understand everything…\nuntil it’s your turn.\n\nUse this instead:\n${phrase}`;
+  const variations = [
+    `You understand French.\nUntil it’s time to answer in French.\n\nUse this instead:\n${phrase}`,
+
+    `Following the conversation is one thing.\nResponding in real time is another.\n\nUse this instead:\n${phrase}`,
+
+    `Understanding French feels good.\nSpeaking it under pressure is different.\n\nUse this instead:\n${phrase}`,
+
+    `You can follow the French conversation.\nThat doesn’t mean you’re ready to reply.\n\nUse this instead:\n${phrase}`,
+
+    `You know more French than you can actually use on the spot.\n\nUse this instead:\n${phrase}`
+  ];
+
+  newCaption += variations[Math.floor(Math.random() * variations.length)];
 }
 
 else if (structure === "identity") {
