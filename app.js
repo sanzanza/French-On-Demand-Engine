@@ -732,9 +732,10 @@ function renderOutput(output) {
     <div class="output-item"><span class="output-label">Caption</span>${escapeHtml(output.caption)}</div>
   `;
 
-  elements.ctaBlock.innerHTML = `
-    <div class="output-item"><span class="output-label">CTA</span>${escapeHtml(output.cta)}</div>
-  `;
+  // elements.ctaBlock.innerHTML = `
+//   <div class="output-item">
+//     <span class="output-label">CTA</span>${escapeHtml(output.cta)}</div>
+// `;
 }
 
 function handleSave() {
